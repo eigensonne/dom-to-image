@@ -484,6 +484,7 @@
 				request.responseType = 'blob';
 				request.timeout = TIMEOUT;
 				request.open('GET', url, true);
+				request.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
 				request.send();
 
 				var placeholder;
